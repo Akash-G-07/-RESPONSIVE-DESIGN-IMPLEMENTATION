@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage</title>
+    <style>
+        /* Base styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #007BFF;
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            background: #0056b3;
+            padding: 0.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            padding: 2rem;
+        }
+
+        .grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .grid-2 {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .grid-3 {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .card {
+            background: #f4f4f4;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 0.5rem;
+            text-align: center;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .grid-2, .grid-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .grid-3 {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Responsive Webpage</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="container">
+        <h2>Our Services</h2>
+        <div class="grid grid-3">
+            <div class="card">Service 1</div>
+            <div class="card">Service 2</div>
+            <div class="card">Service 3</div>
+            <div class="card">Service 4</div>
+            <div class="card">Service 5</div>
+            <div class="card">Service 6</div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Responsive Webpage. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Example JavaScript to demonstrate functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.addEventListener('click', () => {
+                    alert(`You clicked on ${card.textContent}`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
