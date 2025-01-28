@@ -44,3 +44,7 @@ This is a **responsive webpage** designed using HTML, CSS, and JavaScript, which
 - JavaScript adds click functionality to the service cards, showing an alert when clicked, enhancing engagement.
 
 This structure ensures an intuitive, visually appealing, and device-friendly design for users.
+
+#OUTPUT OF THE TASK 
+
+![Image](https://github.com/user-attachments/assets/3ba0b9b0-dfe1-4a22-9c0e-9c9599255aae)
